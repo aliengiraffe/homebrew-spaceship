@@ -3,7 +3,7 @@ cask "spotdb" do
   name "spotdb"
   desc "SpotDB - A fast, lightweight data analysis tool"
   homepage "https://github.com/aliengiraffe/spotdb"
-  version "1.11-demo"
+  version "1.20-demo"
 
   livecheck do
     skip "Auto-generated on release."
@@ -11,10 +11,10 @@ cask "spotdb" do
 
   binary "spotdb"
 
-  on_linux do
+  on_macos do
     on_arm do
-      url "https://github.com/aliengiraffe/spotdb/releases/download/v#{version}/spotdb_#{version}_linux_arm64.tar.gz"
-      sha256 "d9d207540bc5d504b448aaa7b84024c80d7e93b131443e9cc61a3677dbcce54f"
+      url "https://github.com/aliengiraffe/spotdb/releases/download/v#{version}/spotdb_#{version}_darwin_arm64.tar.gz"
+      sha256 "0240a3b910ae8bfc4a0486cdd2bf7b32dca10bf1b3cf5ef4cad0ef9b386d34e4"
     end
   end
 
