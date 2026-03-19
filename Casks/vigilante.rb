@@ -3,7 +3,7 @@ cask "vigilante" do
   name "vigilante"
   desc "Autonomous GitHub issue runner for headless coding agents"
   homepage "https://github.com/aliengiraffe/vigilante"
-  version "1.0.3"
+  version "1.0.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,18 +14,18 @@ cask "vigilante" do
   on_macos do
     on_intel do
       url "https://github.com/aliengiraffe/vigilante/releases/download/v#{version}/vigilante_#{version}_macOS_amd64.tar.gz"
-      sha256 "9fa801f56f30d19317d2d41130e2043fa96078f98cdc006987952bb8f21b8dae"
+      sha256 "303c2f8bc3ca89abcc62ba274d6929311143034ba3df74daccc06f7975c98795"
     end
     on_arm do
       url "https://github.com/aliengiraffe/vigilante/releases/download/v#{version}/vigilante_#{version}_macOS_arm64.tar.gz"
-      sha256 "f4027b1da57d86006d72cb9cd71d91c4a81cb5e7b716896469a0b85840148a0a"
+      sha256 "bf5a505de2520e789c37f3c44eacf75fa921410b116333c98753a559d300c64d"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/aliengiraffe/vigilante/releases/download/v#{version}/vigilante_#{version}_Linux_amd64.tar.gz"
-      sha256 "b87f6a7868a649d59b0663a912bc60e0276116bc03efa67c3384fe8c2da126b1"
+      sha256 "fbfa1d548ca78bbc05d1175ff6c9bf746cc2f858e27b7726dd3e3f6b15a04b7a"
     end
   end
 
