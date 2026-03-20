@@ -14,18 +14,18 @@ cask "vigilante" do
   on_macos do
     on_intel do
       url "https://github.com/aliengiraffe/vigilante/releases/download/v#{version}/vigilante_#{version}_macOS_amd64.tar.gz"
-      sha256 "303c2f8bc3ca89abcc62ba274d6929311143034ba3df74daccc06f7975c98795"
+      sha256 "516066f15ff7a6fb509f7016594d2675ffb00fb5f1a71606f9cda849dc431a84"
     end
     on_arm do
       url "https://github.com/aliengiraffe/vigilante/releases/download/v#{version}/vigilante_#{version}_macOS_arm64.tar.gz"
-      sha256 "bf5a505de2520e789c37f3c44eacf75fa921410b116333c98753a559d300c64d"
+      sha256 "2b81c00cf338478c910499bfa30ef28d30b8335f3b2b37ef7239518892150e47"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/aliengiraffe/vigilante/releases/download/v#{version}/vigilante_#{version}_Linux_amd64.tar.gz"
-      sha256 "fbfa1d548ca78bbc05d1175ff6c9bf746cc2f858e27b7726dd3e3f6b15a04b7a"
+      sha256 "ec14a60b90a56cac93722e48a806d161e2e944dd9b49566423574b17b222c9a2"
     end
   end
 
