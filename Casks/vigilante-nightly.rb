@@ -3,7 +3,7 @@ cask "vigilante-nightly" do
   name "vigilante nightly"
   desc "Autonomous GitHub issue runner for headless coding agents"
   homepage "https://github.com/aliengiraffe/vigilante"
-  version "0.0.0-nightly.20260330195836.32f0bd21d19f"
+  version "0.0.0-nightly.20260330203320.7918933e402e"
 
   livecheck do
     skip "Rolling prerelease updated from main."
@@ -13,12 +13,12 @@ cask "vigilante-nightly" do
 
   on_macos do
     on_intel do
-      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260330195836.32f0bd21d19f_macOS_amd64.tar.gz"
-      sha256 "ae5f0df20cd3d097e591f54395aaddaad45cbe2197ec139e29e274194f0c9cb7"
+      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260330203320.7918933e402e_macOS_amd64.tar.gz"
+      sha256 "e8985445c11217930ee1e7afded7f3f927f0b6bf2e3eb8ce552fdab604ea060e"
     end
     on_arm do
-      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260330195836.32f0bd21d19f_macOS_arm64.tar.gz"
-      sha256 "36f71358e6b897819d0dada5b7b0bfe8eb6ecb8d0d9d0718fbe59262f6c852a8"
+      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260330203320.7918933e402e_macOS_arm64.tar.gz"
+      sha256 "148a141418edd54de3f72f9ba542418dc3e24ca54ef053babfb055de935e8948"
     end
 
     postflight do
@@ -36,8 +36,8 @@ cask "vigilante-nightly" do
 
   on_linux do
     on_intel do
-      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260330195836.32f0bd21d19f_Linux_amd64.tar.gz"
-      sha256 "7ec0f341465f6aa84af094d63b2f9810a9a34509a6b5ffbc8ecf805373b06d60"
+      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260330203320.7918933e402e_Linux_amd64.tar.gz"
+      sha256 "47e9db9e15140f2ab671f681fe34f05d5f22237e465250a00d2ad066a629f332"
     end
   end
 
