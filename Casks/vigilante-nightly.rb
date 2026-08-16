@@ -3,7 +3,7 @@ cask "vigilante-nightly" do
   name "vigilante nightly"
   desc "Autonomous GitHub issue runner for headless coding agents"
   homepage "https://github.com/aliengiraffe/vigilante"
-  version "0.0.0-nightly.20260815003020.d5040be2e515"
+  version "0.0.0-nightly.20260816185430.4c307f42d065"
 
   livecheck do
     skip "Rolling prerelease updated from main."
@@ -13,12 +13,12 @@ cask "vigilante-nightly" do
 
   on_macos do
     on_intel do
-      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260815003020.d5040be2e515_macOS_amd64.tar.gz"
-      sha256 "6790741a01c389de58718becf54af3de6a581f49c3b2fbafe724f81683cbee45"
+      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260816185430.4c307f42d065_macOS_amd64.tar.gz"
+      sha256 "8b9d1070d9bf5db55848ba57d05f014811f0f511d405e8db220417d81fe9f304"
     end
     on_arm do
-      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260815003020.d5040be2e515_macOS_arm64.tar.gz"
-      sha256 "1e74457a18ec063c401ea18425302f518b73f7af6338456fcf3d1e01e7539fc3"
+      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260816185430.4c307f42d065_macOS_arm64.tar.gz"
+      sha256 "40edf06dab22ca4666c01c0ace86e818dc24f75eeca234d4270b84f56477db4e"
     end
 
     postflight do
@@ -31,13 +31,32 @@ cask "vigilante-nightly" do
       system_command "/usr/bin/codesign",
                      args:         ["--force", "--sign", "-", "#{staged_path}/vigilante"],
                      must_succeed: false
+      # Homebrew upgrades uninstall then reinstall, so this also runs on upgrade:
+      # point an already-installed managed service at the freshly staged binary.
+      vigilante_binary = "#{staged_path}/vigilante"
+      if File.executable?(vigilante_binary)
+        system_command vigilante_binary,
+                       args:         ["service", "restart"],
+                       must_succeed: false
+      end
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260815003020.d5040be2e515_Linux_amd64.tar.gz"
-      sha256 "004fc25198de4e9a2c56e62e06206ed99f4480ed8234fbfe334274146bf38b2b"
+      url "https://github.com/aliengiraffe/vigilante/releases/download/main-nightly/vigilante_0.0.0-nightly.20260816185430.4c307f42d065_Linux_amd64.tar.gz"
+      sha256 "7cbec8ea5a85f91e87459dd461b6b7e529e26e4579acb3908285eb4893b487d9"
+    end
+
+    postflight do
+      # Homebrew upgrades uninstall then reinstall, so this also runs on upgrade:
+      # point an already-installed managed service at the freshly staged binary.
+      vigilante_binary = "#{staged_path}/vigilante"
+      if File.executable?(vigilante_binary)
+        system_command vigilante_binary,
+                       args:         ["service", "restart"],
+                       must_succeed: false
+      end
     end
   end
 
